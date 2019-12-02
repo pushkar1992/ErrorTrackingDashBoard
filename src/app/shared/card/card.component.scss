@@ -1,0 +1,25 @@
+.card{
+  .card-header{
+    .card-header-right{
+      .card-option {
+        width: 190px;
+        transition: unset;
+      }
+    }
+    &+.card-block-hid{
+      .card-block,.card-block-big,.card-block-small{
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+.card .card-header h5 {
+  margin-bottom: 0;
+  color: #222;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 10px;
+  line-height: 1.4;
+}

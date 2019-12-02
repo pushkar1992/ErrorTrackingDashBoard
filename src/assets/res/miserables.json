@@ -1,0 +1,281 @@
+{
+	"nodes": [
+		{
+			"id": "",
+			"group": "1",
+			"color": "",
+			"type": "INQUIRY",
+			"name": "No Name",
+			"nodeId": "3000043",
+			"inqId": "No inquiry Id",
+			"appliId": "No Application Id",
+			"status": "",
+			"insertDt": "2017-03-30 16:03:59",
+			"submissionType": "pending",
+			"submissionDt": "2017-03-30 16:03:59",
+			"ruleExecuted": "RULES_EXECUTED_NONE"
+		},
+		{
+			"id": "",
+			"group": "1",
+			"color": "",
+			"type": "STD_PHONE_NUMBER",
+			"name": "No Name",
+			"nodeId": "3000028",
+			"inqId": "No inquiry Id",
+			"appliId": "No Application Id",
+			"status": "",
+			"insertDt": "2017-03-30 16:03:59",
+			"submissionType": "pending",
+			"submissionDt": "2017-03-30 16:03:59",
+			"ruleExecuted": "RULES_EXECUTED_NONE"
+		},
+		{
+			"id": "",
+			"group": "1",
+			"color": "",
+			"type": "INQUIRY",
+			"name": "No Name",
+			"nodeId": "3000037",
+			"inqId": "No inquiry Id",
+			"appliId": "No Application Id",
+			"status": "",
+			"insertDt": "2017-03-30 16:03:59",
+			"submissionType": "pending",
+			"submissionDt": "2017-03-30 16:03:59",
+			"ruleExecuted": "RULES_EXECUTED_NONE"
+		},
+		{
+			"id": "",
+			"group": "1",
+			"color": "",
+			"type": "INQUIRY",
+			"name": "No Name",
+			"nodeId": "3000013",
+			"inqId": "No inquiry Id",
+			"appliId": "No Application Id",
+			"status": "",
+			"insertDt": "2017-03-30 16:03:59",
+			"submissionType": "pending",
+			"submissionDt": "2017-03-30 16:03:59",
+			"ruleExecuted": "RULES_EXECUTED_NONE"
+		},
+		{
+			"id": "",
+			"group": "1",
+			"color": "",
+			"type": "STD_PHONE_NUMBER",
+			"name": "No Name",
+			"nodeId": "3000012",
+			"inqId": "No inquiry Id",
+			"appliId": "No Application Id",
+			"status": "",
+			"insertDt": "2017-03-30 16:03:59",
+			"submissionType": "pending",
+			"submissionDt": "2017-03-30 16:03:59",
+			"ruleExecuted": "RULES_EXECUTED_NONE"
+		},
+		{
+			"id": "",
+			"group": "1",
+			"color": "",
+			"type": "INQUIRY",
+			"name": "No Name",
+			"nodeId": "3000009",
+			"inqId": "No inquiry Id",
+			"appliId": "No Application Id",
+			"status": "",
+			"insertDt": "2017-03-30 16:03:59",
+			"submissionType": "pending",
+			"submissionDt": "2017-03-30 16:03:59",
+			"ruleExecuted": "RULES_EXECUTED_NONE"
+		},
+		{
+			"id": "",
+			"group": "1",
+			"color": "",
+			"type": "PASSPORT_NBR",
+			"name": "No Name",
+			"nodeId": "3000007",
+			"inqId": "No inquiry Id",
+			"appliId": "No Application Id",
+			"status": "",
+			"insertDt": "2017-03-30 16:03:59",
+			"submissionType": "pending",
+			"submissionDt": "2017-03-30 16:03:59",
+			"ruleExecuted": "RULES_EXECUTED_NONE"
+		},
+		{
+			"id": "",
+			"group": "1",
+			"color": "",
+			"type": "INQUIRY",
+			"name": "No Name",
+			"nodeId": "3000005",
+			"inqId": "No inquiry Id",
+			"appliId": "No Application Id",
+			"status": "",
+			"insertDt": "2017-03-30 16:03:59",
+			"submissionType": "pending",
+			"submissionDt": "2017-03-30 16:03:59",
+			"ruleExecuted": "RULES_EXECUTED_NONE"
+		},
+		{
+			"id": "",
+			"group": "1",
+			"color": "",
+			"type": "STD_PHONE_NUMBER",
+			"name": "No Name",
+			"nodeId": "3000004",
+			"inqId": "No inquiry Id",
+			"appliId": "No Application Id",
+			"status": "",
+			"insertDt": "2017-03-30 16:03:59",
+			"submissionType": "pending",
+			"submissionDt": "2017-03-30 16:03:59",
+			"ruleExecuted": "RULES_EXECUTED_NONE"
+		},
+		{
+			"id": "",
+			"group": "1",
+			"color": "",
+			"type": "PAN",
+			"name": "No Name",
+			"nodeId": "3000003",
+			"inqId": "No inquiry Id",
+			"appliId": "No Application Id",
+			"status": "",
+			"insertDt": "2017-03-30 16:03:59",
+			"submissionType": "pending",
+			"submissionDt": "2017-03-30 16:03:59",
+			"ruleExecuted": "RULES_EXECUTED_NONE"
+		},
+		{
+			"id": "",
+			"group": "1",
+			"color": "",
+			"type": "INQUIRY",
+			"name": "No Name",
+			"nodeId": "3000001",
+			"inqId": "No inquiry Id",
+			"appliId": "No Application Id",
+			"status": "",
+			"insertDt": "2017-03-30 16:03:58",
+			"submissionType": "pending",
+			"submissionDt": "2017-03-30 16:03:58",
+			"ruleExecuted": "RULES_EXECUTED_NONE"
+		}
+	],
+	"links": [
+		{
+			"source": "3000043",
+			"target": "3000003",
+			"type": "PAN"
+		},
+		{
+			"source": "3000028",
+			"target": "3000037",
+			"type": "INQUIRY"
+		},
+		{
+			"source": "3000037",
+			"target": "3000028",
+			"type": "STD_PHONE_NUMBER"
+		},
+		{
+			"source": "3000037",
+			"target": "3000003",
+			"type": "PAN"
+		},
+		{
+			"source": "3000013",
+			"target": "3000012",
+			"type": "STD_PHONE_NUMBER"
+		},
+		{
+			"source": "3000013",
+			"target": "3000003",
+			"type": "PAN"
+		},
+		{
+			"source": "3000012",
+			"target": "3000013",
+			"type": "INQUIRY"
+		},
+		{
+			"source": "3000012",
+			"target": "3000009",
+			"type": "INQUIRY"
+		},
+		{
+			"source": "3000009",
+			"target": "3000012",
+			"type": "STD_PHONE_NUMBER"
+		},
+		{
+			"source": "3000009",
+			"target": "3000007",
+			"type": "PASSPORT_NBR"
+		},
+		{
+			"source": "3000007",
+			"target": "3000009",
+			"type": "INQUIRY"
+		},
+		{
+			"source": "3000007",
+			"target": "3000005",
+			"type": "INQUIRY"
+		},
+		{
+			"source": "3000005",
+			"target": "3000004",
+			"type": "STD_PHONE_NUMBER"
+		},
+		{
+			"source": "3000005",
+			"target": "3000007",
+			"type": "PASSPORT_NBR"
+		},
+		{
+			"source": "3000004",
+			"target": "3000005",
+			"type": "INQUIRY"
+		},
+		{
+			"source": "3000004",
+			"target": "3000001",
+			"type": "INQUIRY"
+		},
+		{
+			"source": "3000003",
+			"target": "3000043",
+			"type": "INQUIRY"
+		},
+		{
+			"source": "3000003",
+			"target": "3000037",
+			"type": "INQUIRY"
+		},
+		{
+			"source": "3000003",
+			"target": "3000013",
+			"type": "INQUIRY"
+		},
+		{
+			"source": "3000003",
+			"target": "3000001",
+			"type": "INQUIRY"
+		},
+		{
+			"source": "3000001",
+			"target": "3000004",
+			"type": "STD_PHONE_NUMBER"
+		},
+		{
+			"source": "3000001",
+			"target": "3000003",
+			"type": "PAN"
+		}
+	]
+}

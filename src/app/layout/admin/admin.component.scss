@@ -1,0 +1,38 @@
+.pcoded .pcoded-navbar .pcoded-navigation-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 1;
+    padding: 10px 15px;
+    text-transform: lowercase;
+    visibility: visible;
+    width: 100%;
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    transition: opacity 0.3s linear;
+    /* border-bottom: 1px solid rgba(214, 214, 214, 0.5); */
+}
+
+
+::ng-deep .mat-tooltip {
+    font-size: 12px !important;
+    position: relative;
+    left: 10px;
+}
+
+
+
+
+.footer2 {
+    border-top: 1px solid #ded1d1;
+    padding: 0.1% 0;
+    margin-top: 7%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+.disabled {cursor: default;}

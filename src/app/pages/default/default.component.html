@@ -1,0 +1,212 @@
+<div class="page-body" style="margin-left: 35px;margin-right: 35px;margin-top: 23px;">
+   <div class="row">
+        <div class="col-md-2 col-md-2">
+            <div class="card bg-c-blue order-card">
+              <div class="card-block">
+                  <p class="m-b-0" style="font-size: 33px;">Total<span class="f-right">140 </span></p>
+                  <p class="m-b-0">Tickets Total Count</p>
+                </div>
+            </div>
+          </div>
+      <div class="offset-3 col-xl-4" style="color: darkblue;">
+              <h2>Playground Support Dashboard</h2>
+               <small>This Dashboard represent the Ticketing Support Sysytem </small> 
+
+      </div>
+        <br><br>
+    </div>
+
+  <div class="row">    
+      
+      <div class="col-md-6 col-xl-6" >
+          <h6>Priority - Tickets count w.r.t. priority</h6>
+
+      </div>
+      <div class="col-md-6 col-xl-6" >
+          <h6>Status - Tickets count w.r.t. status</h6>
+  
+      </div>
+
+    <!-- order-card start -->
+    <div class="col-md-6 col-xl-2" *ngFor="let block of blockDetails.priority">
+      <div class="card {{block.colour}} order-card">
+        <div class="card-block">
+      
+                        <p class="m-b-0" style="font-size: 33px;">{{block.title}}<span class="f-right">{{block.count}}</span></p>
+                        <p class="m-b-0">{{block.subTitle}}<span class="f-right">{{block.subCount}}</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-xl-2" *ngFor="let status of blockDetails.status">
+        <div class="card  {{status.colour}} order-card">
+          <div class="card-block">
+                             <p class="m-b-0" style="font-size: 30px;">{{status.title}}<span class="f-right">{{status.count}}</span></p>
+                        <p class="m-b-0">{{status.subTitle}}</p>
+          </div>
+        </div>
+      </div>
+    
+    
+   
+  </div>
+
+  <div class="row">
+      <div class="col-md-6 col-xl-12" >
+          <h6>Tickets count w.r.t. type</h6>
+      </div>
+          <div class="col-md-12 col-lg-4">
+              <app-card [title]="'New Request'">
+                <div id="chartpie1"></div>
+              </app-card>
+            </div>
+            <div class="col-md-12 col-lg-4">
+                <app-card [title]="'Bug'">
+                  <div id="chartpie2"></div>
+                </app-card>
+              </div>
+            <div class="col-md-12 col-lg-4">
+              <app-card [title]="'Issue'">
+                <div id="chartpie3"></div>
+              </app-card>
+            </div>
+  </div> 
+
+      <div class="row">
+          <div class="col-md-6 col-xl-12" >
+              <h6>Monthly Tickets count data </h6>
+          </div>
+          <div class="col-md-12 col-lg-12">
+              <app-card [title]="'Bar Chart'">
+                <div id="chartbar"></div>
+              </app-card>
+            </div>
+       </div>
+       
+      
+       <div class="row">
+        <div class="col-md-6 col-xl-12" >
+            <h6>User Visit statistics </h6>
+        </div>
+        <div class="col-md-12 col-lg-12">
+            <app-card [title]="'Count statistics'">
+              <div id="visitor-list-graph" style="height: 400px"></div>
+            </app-card>
+          </div>
+     </div>
+<div class="row">
+
+      <div class="col-xl-3">
+        <app-card [title]="'LeaderBoard'" [cardClass]="'review-task'">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <tbody>
+              <tr *ngFor="let leader of leaderBoardData">
+                <td><a href="javascript:"><img class="img-rounded" src="assets/images/widget/profile-ico.png" alt="chat-user"></a>
+                </td>
+                <td>
+                  <h6>{{leader.firstName}} {{leader.lastName}}</h6>
+                  <p class="text-muted">{{leader.location}}</p>
+                </td>
+                <td>
+                    {{leader.visitStat}}
+                </td>
+              </tr>
+          
+              </tbody>
+            </table>
+          </div>
+        </app-card>
+      </div>
+      <div class="col-xl-9">
+        <!-- New ticket button card start -->
+        <div class="card">
+          <div class="card-body">
+            <div class=" waves-effect waves-light m-r-10 v-middle issue-btn-group">
+                <input
+                type="text"
+                style="padding:8px;margin:15px auto;width:30%;"
+                placeholder="Type to filter the Priority..."
+                (keyup)="updateFilter($event,'priority')"
+                />
+                &nbsp;
+                  <input
+                  type="text"
+                  style="padding:8px;margin:15px auto;width:30%;"
+                  placeholder="Type to filter the Assigned..."
+                  (keyup)="updateFilter($event,'assigned')"
+                />
+
+                &nbsp;
+                <input
+                  type="text"
+                  style="padding:8px;margin:15px auto;width:30%;"
+                  placeholder="Type to filter the Status..."
+                  (keyup)="updateFilter($event,'status')"
+                />
+             
+            </div>
+          </div>
+        </div>
+        <!-- New ticket button card end -->
+        <!-- bug list card start -->
+        <app-card [title]="'Issue Details'" [cardOptionBlock]="true">
+          <ngx-datatable
+            class="data-table table-responsive task-list-table"
+            [rows]="rowsTask"
+            [loadingIndicator]="loadingIndicator"
+            [columnMode]="'force'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [limit]="10"
+            [rowHeight]="66"
+            [reorderable]="reorderable">
+            <ngx-datatable-column name="Bug">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                {{row['type']}}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="#">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                <a href="javascript:">{{row['id']}}</a>
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Description">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                {{row['description']}}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Start Date">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                {{row['date']}}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Priority">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                <span class="label label-danger" *ngIf="row.priority === 'Highest'">{{row.priority}}</span>
+                <span class="label label-warning" *ngIf="row.priority === 'High'">{{row.priority}}</span>
+                <span class="label label-success" *ngIf="row.priority === 'Normal'">{{row.priority}}</span>
+                <span class="label label-primary" *ngIf="row.priority === 'Slow'">{{row.priority}}</span>
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Assigned">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                <a href="javascript:">{{row['assigned']}}</a>
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Status">
+              <ng-template let-row="row" ngx-datatable-cell-template>
+                <span class="label label-primary" *ngIf="row.status === 'Open'">{{row.status}}</span>
+                <span class="label label-danger" *ngIf="row.status === 'Close'">{{row.status}}</span>
+                <span class="label label-warning" *ngIf="row.status === 'Pending'">{{row.status}}</span>
+                <span class="label label-info" *ngIf="row.status === 'On Hold'">{{row.status}}</span>
+              </ng-template>
+            </ngx-datatable-column>
+          </ngx-datatable>
+        </app-card>
+        <!-- bug list card end -->
+      </div>
+    </div>
+      
+       
+      </div>
+
